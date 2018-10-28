@@ -20,9 +20,9 @@ var items = [
     )]
     ,
     ["instructions", "PennController", PennController(
-        newHtml("instructions form", "TaskInstructionsUnmarked.html") 
-//        newHtml("instructions form", "TaskInstructionsV2.html") 
-//        newHtml("instructions form", "TaskInstructionsSpAct.html") 
+        newHtml("instructions form", "TaskInstructionsUnmarked.html")
+//        newHtml("instructions form", "TaskInstructionsV2.html")
+//        newHtml("instructions form", "TaskInstructionsSpAct.html")
 
             .print()
         ,
@@ -65,7 +65,7 @@ var items = [
         newButton("continue btn", "Fortsetzen.")
             .print()
             .wait( getHtml("distract form").test.complete().failure(getHtml("distract form").warn()) )
-    )] 
+    )]
     ,      
     ["feedback", "PennController", PennController(
         newHtml("feedback form", "ProlificFeedback.html")
@@ -83,7 +83,7 @@ var items = [
     ["prolificConf", "PennController", PennController(
         newHtml("thanks", "ProlificConfirmation.html")
             .settings.log()
-            .print() 
+            .print()
         ,
         newButton("continue btn", "Jag &auml;r klar.")
             .settings.bold()
@@ -155,8 +155,8 @@ PennController.FeedItems( PennController.GetTable( "GER-datasource-MCP.csv" ).fi
         newCanvas("ansbox", 730, 120)
             .settings.add(25,25, newText("background", "F&uuml;r mich h&ouml;rt sich dieser Satz:").settings.size(700, 30) )   
             .settings.add( 25,75, newText("labelLeft", "vollkommen unnat&uuml;rlich").settings.bold() )
-            .settings.add(180,70, getScale("answer").settings.size(200, 0) )
-            .settings.add(415,75, newText("labeRight", "vollkommen nat&uuml;rlich").settings.bold() )
+            .settings.add(195,70, getScale("answer").settings.size(200, 0) )
+            .settings.add(425,75, newText("labeRight", "vollkommen nat&uuml;rlich an").settings.bold() )
             .print()
         ,        
         newButton("validate", "N&auml;chste Frage.")
@@ -202,8 +202,8 @@ PennController.FeedItems( PennController.GetTable( "GER-datasource-MCP.csv" ).fi
         newCanvas("ansbox", 730, 120)
             .settings.add(25,25, newText("background", "F&uuml;r mich h&ouml;rt sich dieser Satz:").settings.size(700, 30) )   
             .settings.add( 25,75, newText("labelLeft", "komplett unnat&uuml;rlich").settings.bold() )
-            .settings.add(180,70, getScale("answer").settings.size(200, 0) )
-            .settings.add(415,75, newText("labeRight", "komplett nat&uuml;rlich").settings.bold() )
+            .settings.add(195,70, getScale("answer").settings.size(200, 0) )
+            .settings.add(425,75, newText("labeRight", "komplett nat&uuml;rlich an").settings.bold() )
             .print()  
         ,
         newText("warning","Bitte w&auml;hlen Sie eine Antwort aus.")
@@ -214,7 +214,7 @@ PennController.FeedItems( PennController.GetTable( "GER-datasource-MCP.csv" ).fi
             .print()
         ,
         newButton("validate", "N&auml;chste Frage.")
-            .settings.center() 
+            .settings.center()
             .print()    
             .wait(getScale("answer")
                   .test.selected()
@@ -239,7 +239,7 @@ PennController.FeedItems( PennController.GetTable( "GER-datasource-MCP.csv" ).fi
     .log("InSitu_Stims", item.InSitu_Stims)     
    // .log("V2_Stims", item.V2_Stims)  
    // .log("SpActAdv_Stims", item.SpActAdv_Stims)           
-    .log("PROLIFIC_PID", PennController.GetURLParameter("PROLIFIC_PID")) 
+    .log("PROLIFIC_PID", PennController.GetURLParameter("PROLIFIC_PID"))
 );
 
 PennController.FeedItems( PennController.GetTable( "GER-datasource-MCP.csv" ).filter("Expt","experiment"),
@@ -278,9 +278,9 @@ PennController.FeedItems( PennController.GetTable( "GER-datasource-MCP.csv" ).fi
         newCanvas("ansbox", 730, 120)
             .settings.add(25,25, newText("background", "F&uuml;r mich h&ouml;rt sich dieser Satz:").settings.size(700, 30) )   
             .settings.add( 25,75, newText("labelLeft", "komplett unnat&uuml;rlich").settings.bold() )
-            .settings.add(180,70, getScale("answer").settings.size(200, 0) )
-            .settings.add(415,75, newText("labeRight", "komplett nat&uuml;rlich").settings.bold() )
-            .print() 
+            .settings.add(195,70, getScale("answer").settings.size(200, 0) )
+            .settings.add(425,75, newText("labeRight", "komplett nat&uuml;rlich an").settings.bold() )
+            .print()
         ,
         newText("warning","Bitte w&auml;hlen Sie eine Antwort aus.")
             .settings.hidden()
@@ -290,7 +290,7 @@ PennController.FeedItems( PennController.GetTable( "GER-datasource-MCP.csv" ).fi
             .print()
         ,
         newButton("validate", "N&auml;chste Frage.")
-            .settings.center() 
+            .settings.center()
             .print()    
             .wait(getScale("answer")
                   .test.selected()
